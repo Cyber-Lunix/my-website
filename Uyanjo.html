@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uyanjo Organics — Hair Growth Oils & Care</title>
+  <meta name="description" content="Uyanjo Organics: natural oils and hair care essentials for healthy growth, strength, and shine." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1311; --fg: #f2f6f3; --muted: #cdd8cf;
+      --brand: #4caf50; --brand-dark: #2f7c34;
+      --card: #304242; --alt: #08250f; --border: #203324;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Poppins',sans-serif; background:var(--bg); color:var(--fg); line-height:1.6; }
+    .nav { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1rem; padding:1rem 1.5rem; }
+    .logo { font-weight:700; } .logo span{color:var(--brand);} .logo img { height: 10rem; }
+    .nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0;}
+    .nav-links a{color:var(--fg);text-decoration:none;opacity:.9;}
+    nav-toggle{display:none;background:transparent;color:var(--fg);border:none;font-size:1.25rem;}
+    .hero{background:linear-gradient(120deg,#102115,#0f1410 60%,#0b100c);border-bottom:1px solid var(--border);}
+    .hero-content{max-width:1100px;margin:3rem auto;padding:2rem;text-align:center;}
+    .hero h1{font-size:2.4rem;margin:0 0 .5rem;}
+    .hero p{color:var(--muted);margin:0 0 1.25rem;}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--fg);cursor:pointer;text-decoration:none;}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:#0a130b;font-weight:600;}
+    .btn.small{padding:.45rem .8rem;font-size:.9rem;}
+    .section{max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem;}
+    .section h2{margin:0 0 .5rem;font-size:1.8rem;}
+    .section-sub{color:var(--muted);margin-bottom:1.5rem;}
+    .grid{display:grid;gap:1rem;}
+    .cards{grid-template-columns:repeat(3,1fr);}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;}
+    .card img{width:100%;height:200px;object-fit:cover;}
+    .card-body{padding:1rem;}
+    .bullets{margin:.75rem 0;padding-left:1.2rem;}
+    .bullets li{margin:.25rem 0;color:var(--muted);}
+    .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;}
+    .price{font-weight:600;}
+    .alt{background:var(--alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .features{grid-template-columns:repeat(3,1fr);}
+    .feature{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:12px;text-align:center;}
+    .feature .icon{font-size:1.5rem;}
+    .ingredients{grid-template-columns:repeat(4,1fr);}
+    .ingredient{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:12px;}
+    .testimonials{grid-template-columns:repeat(3,1fr);}
+    .quote{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:12px;font-style:italic;}
+    .quote footer{color:var(--muted);margin-top:.5rem;}
+    .faq details{background:var(--card);border:1px solid var(--border);padding:.75rem 1rem;border-radius:10px;margin-bottom:.75rem;}
+    .table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    .table th, .table td { border: 1px solid var(--border); padding: 0.5rem; text-align: left; }
+    .table th { background: var(--card); color: var(--fg); }
+    .gallery { grid-template-columns: repeat(5, 1fr); gap: 1rem; }    .gallery img { width: 150px; height: 150px; object-fit: cover; }    .form{max-width:650px;}
+    .form-row{display:grid;gap:.4rem;margin-bottom:.9rem;}
+    input,textarea{width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid var(--border);background:#0c100e;color:var(--fg);}
+    .status{margin-top:.75rem;color:var(--muted);}
+    .footer{border-top:1px solid var(--border);padding:2rem 1.5rem;}
+    .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+    .foot-links{list-style:none;padding:0;margin:0;}
+    .foot-links li{margin:.4rem 0;}
+    .foot-links a{color:var(--muted);text-decoration:none;}
+    @media(max-width:960px){.cards{grid-template-columns:1fr 1fr;} .features{grid-template-columns:1fr 1fr;} .ingredients{grid-template-columns:1fr 1fr;} .testimonials{grid-template-columns:1fr 1fr;} }
+    @media(max-width:640px){.nav{grid-template-columns:1fr auto;} .nav-links{display:none;} .nav-toggle{display:inline-block;} .cards,.features,.ingredients,.testimonials{grid-template-columns:1fr;} .hero h1{font-size:2rem;} }
+  </style>
+  </head>
+  <body>
+        <header class="hero">
+          <nav class="nav">
+            <ul class="nav-links">
+              <li><a href="#products">Products</a></li>
+              <li><a href="#benefits">Benefits</a></li>
+              <li><a href="#ingredients">Ingredients</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a class="btn" href="#contact">Contact</a></li>
+            </ul>
+            <div class="logo"><img src="LOGO.jpeg" alt="Uyanjo Organics"></div>
+            <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+          </nav>
+          <div class="hero-content">
+            <h1>Grow strong, shine natural.</h1>
+            <p>Handcrafted hair growth oils and botanicals—rooted in nature, made for real results.</p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#products">Shop oils</a>
+              <a class="btn outline" href="#ingredients">See what’s inside</a>
+            </div>
+          </div>
+        </header>
+
+        <!-- Benefits -->
+        <section id="benefits" class="section alt">
+          <h2>Why choose our blends</h2>
+          <p class="section-sub">Designed for all hair types and daily use.</p>
+          <div class="grid features">
+            <div class="feature"><div class="icon">🌿</div><strong>Natural</strong><div class="muted">Botanical ingredients</div></div>
+            <div class="feature"><div class="icon">⚡</div><strong>Effective</strong><div class="muted">Clinically-inspired blends</div></div>
+            <div class="feature"><div class="icon">♻️</div><strong>Sustainable</strong><div class="muted">Ethical sourcing</div></div>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="section">
+          <h2>Gallery</h2>
+          <p class="section-sub">Images of our products and more.</p>
+          <div class="grid gallery">
+            <img src="Product (1).jpg" alt="Product 1">
+            <img src="Product (2).jpg" alt="Product 2">
+            <img src="Product (3).jpg" alt="Product 3">
+            <img src="Product (4).jpg" alt="Product 4">
+            <img src="Product (5).jpg" alt="Product 5">
+            <img src="Product (6).jpg" alt="Product 6">
+            <img src="Product (7).jpg" alt="Product 7">
+            <img src="Product (8).jpg" alt="Product 8">
+            <img src="Product (9).jpg" alt="Product 9">
+            <img src="Product (10).jpg" alt="Product 10">
+            <img src="Product (11).jpg" alt="Product 11">
+            <img src="Product (12).jpg" alt="Product 12">
+            <img src="Product (13).jpg" alt="Product 13">
+            <img src="Product (14).jpg" alt="Product 14">
+            <img src="Product (15).jpg" alt="Product 15">
+          </div>
+        </section>
+
+        <!-- Other Products -->
+        <section id="other-products" class="section">
+          <h2>Other Products</h2>
+          <p class="section-sub">Additional products produced by Uyanjo.</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Variant</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Castor oil</td><td>250ml</td><td>12000 Tsh</td></tr>
+              <tr><td>Castor oil</td><td>120ml</td><td>6000 Tsh</td></tr>
+              <tr><td>Conditioner</td><td>250ml</td><td>10000 Tsh</td></tr>
+              <tr><td>Conditioner</td><td></td><td></td></tr>
+              <tr><td>Conditioner</td><td>1ltr</td><td>14000 Tsh</td></tr>
+              <tr><td>Shampoo</td><td>500ml</td><td>15000 Tsh</td></tr>
+              <tr><td>Shampoo</td><td>250ml</td><td>7000 Tsh</td></tr>
+              <tr><td>Shampoo</td><td>1ltr</td><td>18,000 Tsh</td></tr>
+              <tr><td>Shower Gel</td><td>500ml</td><td>15000 Tsh</td></tr>
+              <tr><td>Shower Gel</td><td>250ml</td><td>7000 Tsh</td></tr>
+              <tr><td>Shower Gel</td><td>1ltr</td><td>18,000 Tsh</td></tr>
+              <tr><td>Shea Butter</td><td>250g</td><td>15000 Tsh</td></tr>
+              <tr><td>Sea moss body butter</td><td>200g</td><td>15000 Tsh</td></tr>
+              <tr><td>Hair Growth Oil</td><td>250ml</td><td>15,000 Tsh</td></tr>
+              <tr><td>Hair Growth Oil</td><td>120ml</td><td>7500 Tsh</td></tr>
+              <tr><td>Massage oil</td><td></td><td></td></tr>
+              <tr><td>Sea Moss powder</td><td>200g</td><td>10000 Tsh</td></tr>
+              <tr><td>Sea moss</td><td>250g</td><td>10000 Tsh</td></tr>
+              <tr><td>Castor oil</td><td></td><td></td></tr>
+              <tr><td>Organic honey</td><td>1 kg</td><td>12000 Tsh</td></tr>
+              <tr><td>Chebe steaming</td><td>250 ml</td><td>15000 Tsh</td></tr>
+              <tr><td>Body lotion</td><td>1 Ltr</td><td>14,000 Tsh</td></tr>
+              <tr><td>Chebe butter</td><td>200 g</td><td>20,000 Tsh</td></tr>
+              <tr><td>Chebe hair oil</td><td>250 ml</td><td>15,000 Tsh</td></tr>
+              <tr><td>Star anise</td><td>250 ml</td><td>10000 Tsh</td></tr>
+              <tr><td>Face oil</td><td></td><td></td></tr>
+              <tr><td>Alovera jelly</td><td></td><td></td></tr>
+              <tr><td>Hair steaming</td><td>250 ml</td><td>15,000 Tsh</td></tr>
+              <tr><td>Mango butter</td><td>200 g</td><td>25000 Tsh</td></tr>
+              <tr><td>Hairbooster</td><td>200 g</td><td>20,000 Tsh</td></tr>
+              <tr><td>Petroleum jelly</td><td>150 g</td><td>3000 Tsh</td></tr>
+              <tr><td>Rosemary oil</td><td>250 ml</td><td>18,000 Tsh</td></tr>
+              <tr><td>Hair grease</td><td>300g</td><td>15,000 Tsh</td></tr>
+              <tr><td>Beard oil</td><td>100 ml</td><td>15,000 Tsh</td></tr>
+              <tr><td>Honey</td><td>500 g</td><td>6000 Tsh</td></tr>
+              <tr><td>Honey</td><td>300 g</td><td>5000 Tsh</td></tr>
+              <tr><td>Infused honey</td><td>500 g</td><td>10000 Tsh</td></tr>
+              <tr><td>Lotion</td><td>250 ml</td><td>6000 Tsh</td></tr>
+              <tr><td>Chebe oil</td><td>120ml</td><td>7500 Tsh</td></tr>
+              <tr><td>Spray</td><td>250ml</td><td>5000 Tsh</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Ingredients -->
+        <section id="ingredients" class="section">
+          <h2>Key ingredients</h2>
+          <p class="section-sub">Pure extracts and oils we rely on.</p>
+          <div class="grid ingredients">
+            <div class="ingredient">Rosemary Oil</div>
+            <div class="ingredient">Castor Oil</div>
+            <div class="ingredient">Argan Oil</div>
+            <div class="ingredient">Jojoba Oil</div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section alt">
+          <h2>What customers say</h2>
+          <div class="grid testimonials">
+            <div class="quote">"My hair has never felt stronger."<footer>— Amina</footer></div>
+            <div class="quote">"Reduced breakage in weeks."<footer>— Rose</footer></div>
+            <div class="quote">"Light, non-greasy, smells great."<footer>— Laila</footer></div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details><summary>How often should I use it?</summary><p>Apply 2-3 times weekly for best results, or nightly for intensive care.</p></details>
+            <details><summary>Are there allergens?</summary><p>Check each product label — we avoid harsh preservatives but some botanical allergens may be present.</p></details>
+            <details><summary>What are the main benefits of using hair growth oils?</summary><p>Hair growth oils can stimulate follicles, improve scalp health, reduce breakage, and promote thicker, shinier hair through natural ingredients like rosemary and castor oil.</p></details>
+            <details><summary>How do I apply the oil?</summary><p>Apply a small amount to your scalp and massage gently. For best results, leave it on for 30-60 minutes or overnight, then shampoo as usual.</p></details>
+            <details><summary>Is it suitable for all hair types?</summary><p>Yes, our blends are designed for various hair types, but if you have specific concerns like sensitive scalp, consult a dermatologist first.</p></details>
+            <details><summary>Are the ingredients natural?</summary><p>Yes, we use pure, natural botanical extracts without synthetic chemicals. All ingredients are ethically sourced.</p></details>
+            <details><summary>How long does it take to see results?</summary><p>Results vary, but many users notice improvements in 4-8 weeks with consistent use. Hair growth is gradual.</p></details>
+            <details><summary>Can I use it with other hair products?</summary><p>Absolutely! Our oils work well with shampoos, conditioners, and styling products. Apply oil before or after other treatments as needed.</p></details>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section alt">
+          <h2>Contact</h2>
+          <p class="section-sub">Reach out for inquiries or support.</p>
+          <p><strong>Email:</strong> uyanjoorganics@gmail.com<br>
+          <strong>Phone:</strong> +255 763440337<br>
+          <strong>Address:</strong> Arusha, Tanzania</p>
+          <form id="contactForm" class="form" onsubmit="return false;">
+            <div class="form-row"><input id="name" placeholder="Your name" required></div>
+            <div class="form-row"><input id="email" placeholder="Email" type="email" required></div>
+            <div class="form-row"><textarea id="message" rows="4" placeholder="Message"></textarea></div>
+            <div><button class="btn primary" id="sendBtn">Send</button><div id="formStatus" class="status"></div></div>
+          </form>
+        </section>
+
+        <footer class="footer">
+          <div class="footer-grid">
+            <div>
+              <strong>Uyanjo Organics</strong>
+              <p class="muted">Natural hair care crafted with care.</p>
+            </div>
+            <div>
+              <ul class="foot-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://facebook.com/uyanjoorganics">Facebook</a></li>
+                <li><a href="https://instagram.com/uyanjoorganics">Instagram</a></li>
+                <li><a href="https://twitter.com/uyanjoorganics">Twitter</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="muted">© Uyanjo Organics</p>
+            </div>
+          </div>
+        </footer>
+
+        <script>
+          document.querySelector('.nav-toggle').addEventListener('click',()=>{
+            const links = document.querySelector('.nav-links');
+            links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+          });
+
+          document.querySelectorAll('.add-to-cart').forEach(btn=>{
+            btn.addEventListener('click',()=>{
+              const product = btn.dataset.product;
+              const cart = JSON.parse(localStorage.getItem('cart')||'[]');
+              cart.push({product,added:Date.now()});
+              localStorage.setItem('cart',JSON.stringify(cart));
+              btn.textContent = 'Added';
+              setTimeout(()=>btn.textContent='Add',900);
+            });
+          });
+
+          document.getElementById('sendBtn').addEventListener('click',()=>{
+            document.getElementById('formStatus').textContent = 'Thanks — message saved locally.';
+          });
+
+          document.getElementById('orderSendBtn').addEventListener('click',()=>{
+            document.getElementById('orderStatus').textContent = 'Order placed successfully — we will contact you soon.';
+          });
+        </script>
+      </body>
+      </html>
